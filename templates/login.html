@@ -1,0 +1,10 @@
+{% extends 'base.html'%} {%block body%}
+<body style="background-color: black; color: aliceblue">
+  <form action="" method="POST">
+    {%csrf_token%}{{form}} <input type="submit" />
+  </form>
+  {%if error%}
+  <h3>{{error}}</h3>
+  {%endif%}
+</body>
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends 'base.html'%} {%block body%}
+<div
+  style="
+    background-color: rgba(199, 188, 255, 0.305);
+    color: white;
+    padding: 2rem;
+  "
+>
+
+
+
+<div style="width: 25em; width: 100%; margin: 0 auto"></div>
+  <h1>Send a message to {{user}}</h1>
+  
+    <form action="" method="POST">
+      {%csrf_token%}{{form}} <input type="submit" />
+    </form>
+  </div>
+  <ol>
+    {%for each in msgs%}
+    <li>{{each.text}}</li>
+    {% endfor %}
+  </ol>
+</div>
+{%endblock%}
